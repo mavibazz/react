@@ -1,0 +1,158 @@
+body{
+  background-color: greenyellow;
+}
+.container{
+max-width: 40%;
+margin: auto;
+padding: 0 20px;
+}
+.card{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 30px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.how{
+  text-align: center;
+}
+.num-display{
+  position: relative;
+  bottom: 45px;
+  left: -35px;
+  background-color: deeppink;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.card .close{
+  position: absolute;
+  left: 500px;
+  bottom: 95px;
+  border: none;
+  font-size: 1rem;
+  color: deeppink;
+  background-color: white;
+  cursor: pointer;
+}
+.card .closes{
+  margin-top: 3px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 7px;
+}
+.card .edit{
+  position: absolute;
+  left: 465px;
+  bottom: 95px;
+  border: none;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+}
+/* styling feedstats */
+.feedstats{
+  display: flex;
+  justify-content: space-between;
+}
+/* styling feedstats done*/
+/* styling feedback form */
+.input-group{
+  margin-top: 5%;
+}
+.input-group input{
+  width: 70%;
+  height: 5vh;
+  border-radius: 0.3rem;
+  border: 2px solid gray;
+}
+.input-group button{
+  cursor: pointer;
+  margin-left: 5%;
+}
+/* styling feedback form done*/
+/* styling button */
+.btn{
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary{
+  background-color: black;
+  color: white;
+}
+.btn-secondary{
+  background-color: pink;
+  color: black;
+}
+.btn-tertiary{
+  background-color: purple;
+  color: white;
+}
+.btn:disabled{
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+/* styling button done */
+/* styling rating */
+ul{
+  list-style: none;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0 40px;
+}
+.rating li{
+  position: relative;
+  bottom: 10px;
+  left: -5px;
+  background-color: rgb(213, 212, 212);
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  margin: 5px;
+}
+.rating li label{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 15px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  
+}
+.rating li:hover,
+.num-display{
+  background-color: deeppink;
+  color: white;
+}
+[type='radio']{
+  opacity: 0;
+}
+[type='radio']:checked ~ label{
+  background-color: deeppink;
+  color: white;
+}
+/* styling rating done */
+@media (max-width: 800px){
+.card .close{
+  position: absolute;
+  left: 225px;
+  bottom: 130px;
+}
+}

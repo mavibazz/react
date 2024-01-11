@@ -1,0 +1,14 @@
+{
+  "feedback": [
+    {
+      "text": "All CRUD now works!!!",
+      "rating": 5,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "rating": 7,
+      "text": "Text 3 coming from JSON server"
+    }
+  ]
+}
