@@ -5,15 +5,25 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import { NavLink } from "react-router-dom";
 import { FeedbackProvider } from "./context/FeedbackContext";
+import AuthProvider from "./context/AuthContext";
+import RegisterPage from "./components/pages/RegisterPage";
+import Login from "./components/pages/Login";
+import useLocalStorage from "./hooks/useLocalStorage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
+  const {getItem} = useLocalStorage("x-auth-token")
+  const token = getItem()
+  let authInitialState ={accessToken: token ?? null}
 
   return(
-    <FeedbackProvider>
+   <AuthProvider defaultState={authInitialState}>
+     <FeedbackProvider>
       <Router>
   <Header />
 <div className="container">
 <Routes>
+  <Route path="/register" element={<RegisterPage />}/>
+  <Route path="/login" element={<Login />}/>
   <Route path="/" element={
     <>
     <FeedbackForm  />
@@ -34,6 +44,7 @@ function App() {
 </div>
 </Router>
 </FeedbackProvider>
+   </AuthProvider>
   );
 }
 

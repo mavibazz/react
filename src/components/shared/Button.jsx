@@ -8,7 +8,7 @@ function Button({children, version, isDisabled}) {
 }
  Button.defaultProps = {
     version: "primary",
-    isDisabled:true
+    isDisabled:false
  }
  Button.propTypes = {
     children: PropTypes.node.isRequired,

@@ -9,7 +9,7 @@ function FeedbackList({handleDelete}) {
     return (
     <div>
     {feedback.map((item)=>(
-        <FeedbackItem key={item.id} feed= {item} deleteFeedback={handleDelete}/>
+        <FeedbackItem key={item._id} feed= {item} deleteFeedback={handleDelete}/>
     ))}
     </div>
   );
