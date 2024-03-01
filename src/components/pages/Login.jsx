@@ -17,7 +17,7 @@ function Login() {
         e.preventDefault()
 
         try{
-            const res = await fetch(`http://localhost:3000/api/login`, {
+            const res = await fetch(`https://react-ashy-three.vercel.app/api/login`, {
 
             method: "POST",
             headers: {
