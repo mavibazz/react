@@ -12,20 +12,20 @@ export const FeedbackProvider = ({ children }) => {
   }, [])
 
   const getFeedback = async ()=>{
-    const response = await fetch('https://react-ashy-three.vercel.app/api/feedback')
+    const response = await fetch('https://reflextouch-api-a8wl.onrender.com/api/feedback')
     const data = await response.json()
     setFeedback(data);
   }
 
   const deleteHandler = async (id) => {
     if (window.confirm("Are you sure you want to delete this item?")) {
-      await fetch(`https://react-ashy-three.vercel.app/api/feedback/${id}`, {method: "DELETE" });
+      await fetch(`https://reflextouch-api-a8wl.onrender.com/api/feedback/${id}`, {method: "DELETE" });
 
       setFeedback(feedback.filter((item) => item._id !== id));
     }
   };
   const postHandler = async (newFeedBack) => {
-    const response = await fetch(`https://react-ashy-three.vercel.app/api/feedback`, {
+    const response = await fetch(`https://reflextouch-api-a8wl.onrender.com/api/feedback`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export const FeedbackProvider = ({ children }) => {
     });
   };
   const updateFeedback =  async (id, updItem) => {
-    const response = await fetch(`https://react-ashy-three.vercel.app/api/feedback/${id}`, {
+    const response = await fetch(`https://reflextouch-api-a8wl.onrender.com/api/feedback/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

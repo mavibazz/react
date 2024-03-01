@@ -14,7 +14,7 @@ async function registerHandler(e){
     e.preventDefault()
 
     try{
-        const res = await fetch(`https://react-ashy-three.vercel.app/api/register`, {
+        const res = await fetch(`https://reflextouch-api-a8wl.onrender.com/api/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

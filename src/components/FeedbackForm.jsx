@@ -66,7 +66,7 @@ const postform = <form onSubmit={handleSubmit}>
     <Card>
         {isAuthenticated ? (postform) :(
           <>
-          <div>Please Login to keave a feedback</div>
+          <div>Please Login to leave a feedback</div>
           <Link to="/login">
           <Button>Login</Button>
           </Link>

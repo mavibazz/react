@@ -17,7 +17,7 @@ function Login() {
         e.preventDefault()
 
         try{
-            const res = await fetch(`https://react-ashy-three.vercel.app/api/login`, {
+            const res = await fetch(`https://reflextouch-api-a8wl.onrender.com/api/login`, {
 
             method: "POST",
             headers: {
